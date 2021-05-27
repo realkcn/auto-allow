@@ -1,0 +1,10 @@
+[Unit]
+Description=Web Api for open iptables access permission
+After=network.target
+
+[Service]
+User=root
+ExecStart=/usr/local/sbin/auto-allow-web -k password
+
+[Install]
+WantedBy=multi-user.target
